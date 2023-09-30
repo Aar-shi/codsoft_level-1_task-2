@@ -1,11 +1,14 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+*
+ {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
 }
 
 header {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: url('purple.png');
     background-size: cover;
@@ -46,7 +49,7 @@ nav {
     transition: 0.4s linear;
 }
 
-.menu a.hover:before {
+.menu a:hover:before {
     width: 90%;
 }
 
@@ -94,60 +97,89 @@ nav {
     background: transparent;
     border: 1px rgb(21, 214, 192);
 }
-
-.section2 h1 {
-    font-size: 2rem;
-    text-align: center;
-    color: rgb(240, 229, 214);
-}
-
 .section2 {
-    background: url('makeup.jpg')
+    height: 180vh;
+    width: 100vw;
+    box-shadow: 5px 5px 50px black;
+    outline: none;
 }
-
-.box {
-    margin: 12px 22px;
+.sec2-bg{
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    height: 180vh ;
+    width: 100vw;
+    z-index: -99;
 }
-
-img {
-    width: 400px;
-    height: 400px;
+.products{
+    display: flex;
+    justify-content: center;
 }
+.sec2-head{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sec2-head > p:nth-child(1){
+    color: white;
+    font-size: 3em;
+    font-weight: 700;
+}
+.sec2-head > p:nth-child(2){
+    font-size: 2.5em;
+    font-weight: 400;
 
-.container {
+}
+.sec2-head > p:nth-child(3){
     position: relative;
+    top: 4vh;
+    left: -32%;
+    font-size: 1.2em;
+}
+.image{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    top: 8vh;
+    height: 40%;
+    width: 100vw;
+}
+.image > img {
+    height: 50vh;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    transition: all 0.3s;
+    box-shadow: 5px 5px 20px white;
+}
+.image > img:hover {
+    transform: scale(1.1);
+}
+.contact{
+    background: url('bgcover.jpg');
+}
+.container {
     min-height: 50vh;
     padding: 50px 50px;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     /* flex-direction: column;*/
-    background: url('ABC/bgcover.jpg');
 }
-
-.contact .content {
-    max-width: 800px;
+.content {
+    width: 100vw;
     text-align: center;
     font-size: 36px;
     font-weight: 500;
-    background: url(bgcover.jpg);
 }
-
-.container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.container .contactInfo {
+.contactInfo {
     width: 50%;
     display: flex;
     flex-direction: column;
 }
 
-.container .contactInfo .box {
+.box {
     position: relative;
     padding: 20px 0;
     display: flex;
@@ -164,9 +196,16 @@ img {
     color: #333;
     font-weight: 500;
 }
-
-.contactForm .inputBox {
+.inputBox {
     position: relative;
     width: 70%;
     margin-top: 10px;
+}
+.msg{
+    position: relative;
+    top: -2vh;
+}
+.btn-send{
+    width: 5vw;
+    font-size: 0.8em;
 }
